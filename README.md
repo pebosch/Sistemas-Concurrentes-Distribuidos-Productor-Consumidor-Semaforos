@@ -12,9 +12,10 @@ Solución al problema del productor-consumidor LIFO y FIFO basada en semáforos.
 - Se puede usar una variable compartida que contiene un ítem de datos.
 - Las esperas asociadas a la lectura y la escritura pueden empeorar la eficiencia. Esto puede mejorarse usando un vector que pueda contener muchos ítems de datos producidos y pendientes de leer.
 
-### En esta situación, la implementación debe asegurar que:
+### En esta situación, la implementación debe asegurar que
 - Cada ıtem producido es leıdo (ningún ítem se pierde).
 - Ningún ítem se lee más de una vez.
+
 Lo cual implica que:
 - El productor tendra que esperar antes de poder escribir en el vector cuando haya creado un ítem pero el vector esté completamente ocupado por ítems pendientes de leer.
 - El consumidor debe esperar cuando vaya a leer un ítem del vector pero dicho vector no contenga ningún ítem pendiente de leer.
